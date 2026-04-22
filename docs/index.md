@@ -1,6 +1,17 @@
 # ZObj
 ZObj is a simple object and executable file format for 8-bit systems. It is designed to be easily handled on such systems.
 
+## Overall Structure
+| Element          | Description                                 |
+| ---------------- | ------------------------------------------- |
+| Header           | Contains metadata about the file            |
+| Section 1 Header | Contains metadata about Section 1           |
+| Section 2 Header | Contains metadata about Section 2           |
+| ...              | Contains metadata about other sections      |
+| Section 1 Data   | Contains the actual data for Section 1      |
+| Section 2 Data   | Contains the actual data for Section 2      |
+| ...              | Contains the actual data for other sections |
+
 ## Header
 ```c
 typedef struct {
