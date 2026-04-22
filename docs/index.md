@@ -56,9 +56,11 @@ typedef struct {
 
 ### Section Types
 - `0x00`: Program data, or other non-metadata section.
-- `0x01`: String table. Contains null-terminated strings, and is used for section and symbol names.
-- `0x02`: Symbol table. Contains an array of symbol entries.
-- `0x03`: Relocation table. Contains an array of relocation entries.
+- `0x01`: String table. Contains null-terminated strings, and is used for section and symbol names. [^1]
+- `0x02`: Symbol table. Contains an array of symbol entries. [^1]
+- `0x03`: Relocation table. Contains an array of relocation entries. [^1]
+
+[^1]: A file may contain at most one string table, one symbol table, and one relocation table.
 
 ### Section Flags
 - `0x01`: Allocate. If set, the section takes up space in memory when the file is loaded.
